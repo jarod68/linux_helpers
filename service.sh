@@ -4,7 +4,7 @@
 # Author:               Matthieu Holtz
 # Year:                 2018
 # Project:              
-# Description:  	    Sample for a system V service
+# Description:  	    Sample for a system V service / to install : run update-rc.d <filename> defaults and make it executable
 #
 # Licence:  	    	SPDX short identifier: MIT
 #
