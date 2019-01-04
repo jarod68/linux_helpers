@@ -59,12 +59,13 @@ search ()
 
 	debug "SEARCHING in $SEARCH_PATH"
 
-	RESULT=`find . $EXCLUDE ! -empty -type f -exec md5sum {} + 2>/dev/null | sort | uniq -w32 -dD`
+	RESULT=`time find . $EXCLUDE ! -empty -type f -exec md5sum {} + 2>/dev/null | sort | uniq -w32 -dD`
 
 	if [ -n "$OUTPUT_PATH" ] ;then
 		debug "PRINTING in $OUTPUT_PATH"
 		echo "$RESULT" > "$OUTPUT_PATH"
 	fi
+
 	echo "--"
 	echo "$RESULT"
 	echo "--"
